@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&family=Poltawski+Nowy:wght@400;700&family=Ramaraja&display=swap');
+
+:root {
+  --teal-dark: #1e3a3a;
+  --teal-text: #38b2ac;
+  --white-text: #ffffff;
+
+  --font-teal-primary: 'Alegreya', serif;
+  --font-teal-secondary: 'Poltawski Nowy', serif;
+  --font-white-primary: 'Alegreya', serif;
+  --font-white-secondary: 'Ramaraja', serif;
+}
+
+.teal-text {
+  color: var(--teal-text);
+  font-family: var(--font-teal-primary);
+}
+
+.teal-alt-text {
+  color: var(--teal-text);
+  font-family: var(--font-teal-secondary);
+}
+
+.white-text {
+  color: var(--white-text);
+  font-family: var(--font-white-primary);
+}
+
+.white-alt-text {
+  color: var(--white-text);
+  font-family: var(--font-white-secondary);
+}
+
+/* Example usage for specific elements */
+
+h1.section-title.teal {
+  color: var(--teal-text);
+  font-family: var(--font-teal-secondary);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+p.white {
+  color: var(--white-text);
+  font-family: var(--font-white-secondary);
+  line-height: 1.6;
+}
+
+/* Apply styles to key headings */
+#about h2,
+#services h2,
+#portfolio h2,
+#tools h2,
+#skills h2,
+#contact h2,
+.teal-labels,
+.teal-descriptors {
+  color: var(--teal-text);
+  font-family: var(--font-teal-primary);
+}
+
+body {
+  background-color: #111827;
+  color: var(--white-text);
+  font-family: var(--font-white-primary);
+}
+
+/* Add transitions if needed */
+.teal-text, .white-text {
+  transition: color 0.3s ease-in-out;
+}

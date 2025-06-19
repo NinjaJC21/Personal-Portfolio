@@ -1,0 +1,170 @@
+#skills {
+    padding: 4rem 2rem;
+    background-color: #111827;
+    font-family: 'Alegreya', 'Poltawski Nowy', 'Ramaraja', serif;
+}
+  
+.skills-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+  
+.skills-left,
+.skills-right {
+    flex: 1 1 400px;
+}
+  
+/* HEADINGS */
+.skills-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #38bdf8;
+    margin-bottom: 0.5rem;
+}
+  
+.skills-subhead {
+    font-size: 1.25rem;
+    color: #e5e7eb;
+    margin-bottom: 1.5rem;
+}
+  
+/* TABS */
+.skills-tabs {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+  
+.skills-tab {
+    background-color: transparent;
+    border: 1px solid whitesmoke;
+    color: teal;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+  
+.skills-tab.active {
+    background-color: #f472b6;
+    color: #111827;
+    font-weight: 600;
+}
+  
+.skills-tab-desc {
+    color: #d1d5db;
+    line-height: 1.6;
+    max-width: 500px;
+}
+  
+/* RIGHT COLUMN */
+.thermo-column {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+}
+  
+.thermo-column::before {
+    content: "";
+    position: absolute;
+    top: 32px;
+    bottom: 125px;
+    left: 48px;
+    width: 3px;
+    background: gold;
+    z-index: 0;
+}
+  
+.skill-step {
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+    position: relative;
+    z-index: 1;
+}
+  
+.thermo-icon {
+    width: 30px;
+    height: 30px;
+    background-color: teal;
+    border-radius: 9999px;
+    padding: 2px;
+    filter: drop-shadow(0 0 6px purple);
+    flex-shrink: 0;
+}
+  
+.thermo-title {
+    color: #c084fc;
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+  
+.thermo-desc {
+    color: #9ca3af;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+  
+/* BARS */
+.skills-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+  
+.bar-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+  
+.bar-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.95rem;
+}
+  
+.bar-name {
+    font-weight: 600;
+    color: #facc15;
+}
+  
+.bar-value {
+    font-weight: 500;
+    color: #38bdf8;
+}
+  
+.bar-bg {
+    background-color: #374151;
+    border-radius: 9999px;
+    height: 1rem;
+    width: 100%;
+    overflow: hidden;
+}
+  
+.bar-fill {
+    background-color: #38bdf8;
+    height: 100%;
+    border-radius: 9999px 0 0 9999px;
+}
+
+.bar-fill {
+    height: 100%;
+    background-color: #38bdf8;
+    border-radius: 9999px 0 0 9999px;
+    width: 0%;
+    transition: width 1.5s ease-in-out;
+}
+  
+.bar-fill.animate-fill {
+    width: var(--bar-width);
+}

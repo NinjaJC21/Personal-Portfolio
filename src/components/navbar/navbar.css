@@ -1,0 +1,62 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(3, 7, 18, 0.95);
+    z-index: 100;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    padding: 0.5rem 1.5rem; /* Thinner navbar */
+    overflow-x: visible;
+}
+  
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1230px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    padding: 0 1.75rem;
+    overflow: visible;
+}
+  
+.home-logo {
+    width: 3.5rem;
+    height: auto;
+    object-fit: contain;
+}
+  
+.nav-links {
+    display: flex;
+    gap: .75rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.1px;
+    text-transform: uppercase;
+    color: white;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+  
+.nav-links a {
+    cursor: pointer;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    color: white;
+}
+  
+.nav-links a:hover {
+    color: #2dd4bf;
+}
+  
+@media (min-width: 768px) {
+    .nav-links {
+      font-size: 1rem;
+    }
+  
+    .home-logo {
+      width: 4rem;
+    }
+}
+  

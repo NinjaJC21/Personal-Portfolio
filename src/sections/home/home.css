@@ -1,0 +1,69 @@
+.home-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 2rem;
+    background-color: #1f2937;
+    position: relative;
+    flex-wrap: wrap; /* allow wrapping for small screens */
+}
+  
+.home-content {
+    max-width: 40rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+  
+.home-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2dd4bf;
+}
+  
+.home-typed {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #2dd4bf;
+}
+  
+.home-quote {
+    font-style: italic;
+    color: #d1d5db;
+    padding-left: 1rem;
+    border-left: 4px solid #a78bfa;
+}
+  
+.home-quote-author {
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    display: block;
+}
+
+/* Updated: Visible on all screen sizes and positioned closer to text */
+.bgUpper-wrapper {
+    position: absolute;
+    top: 7rem;         /* Lower the image */
+    right: 1.5rem;     /* Slightly inward */
+    width: 220px;
+    max-width: 45vw;
+    z-index: 1;
+    opacity: 1;
+}
+  
+.bgUpper {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+  
+  /* Optional: Slight scaling on smaller screens */
+@media (max-width: 768px) {
+    .bgUpper-wrapper {
+      top: 9rem;
+      width: 160px;
+      right: 1rem;
+      opacity: 0.9;
+    }
+}
