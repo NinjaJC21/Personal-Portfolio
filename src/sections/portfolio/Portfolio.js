@@ -1,0 +1,8 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { portfolioItems } from '../../data/portfolio';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import '../../sections/portfolio/portfolio.css';
+export default function Portfolio() {
+    return (_jsx("section", { className: "portfolio-section", id: "portfolio", children: _jsxs("div", { className: "portfolio-container", children: [_jsxs("div", { className: "portfolio-header", children: [_jsx("h2", { className: "portfolio-title", children: "Portfolio" }), _jsx("p", { className: "portfolio-subtitle", children: "My continuously growing work" }), _jsx("p", { className: "portfolio-description", children: "These are previews that I am able to supply for you to showcase what I can do for you, from basic to complex." }), _jsx("p", { className: "portfolio-description", children: "With your blessing, if you\u2019re happy with the outcome, I will ask if I am allowed to showcase on my personal website here." })] }), _jsx("div", { className: "portfolio-carousel-wrapper", children: _jsx(Carousel, { showThumbs: false, infiniteLoop: true, useKeyboardArrows: true, autoPlay: true, interval: 5000, showStatus: false, className: "portfolio-carousel", children: portfolioItems.map((item) => (_jsx("a", { href: item.link, target: "_blank", rel: "noopener noreferrer", className: "carousel-item-link", children: _jsxs("div", { className: "carousel-item-bg", children: [_jsx("img", { src: item.image, alt: item.title, className: "carousel-image" }), _jsx("p", { className: "legend", children: item.title })] }) }, item.id))) }) })] }) }));
+}
