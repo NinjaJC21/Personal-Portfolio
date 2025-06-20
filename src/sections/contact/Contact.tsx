@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import '../../sections/contact/contact.css';
+import route from '../../data/route';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -8,7 +9,7 @@ export default function Contact() {
     message: '',
     budget: '',
   });
-  const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -16,10 +17,10 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus('idle');
+    setStatus('sending');
   
     try {
-      const res = await fetch('/api/email', {
+      const res = await fetch(route.email, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
@@ -35,12 +36,6 @@ export default function Contact() {
         alert(data.message || 'Something went wrong.');
       }
   
-      if (res.ok) {
-        setStatus('success');
-        setFormData({ name: '', email: '', message: '', budget: '' });
-      } else {
-        setStatus('error');
-      }
     } catch (err) {
       console.error(err);
       setStatus('error');
@@ -125,8 +120,10 @@ export default function Contact() {
           />
 
           <button type="submit" className="submit-button">Start Now!</button>
+          {status === 'sending' && <p className="sending-message">Sending...</p>}
           {status === 'success' && <p className="success-message">Message sent successfully!</p>}
           {status === 'error' && <p className="error-message">Something went wrong. Please try again.</p>}
+
         </form>
       </div>
     </section>
