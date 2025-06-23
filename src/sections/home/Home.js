@@ -1,7 +1,7 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { TypeAnimation } from 'react-type-animation';
 import '../../sections/home/home.css';
-import bgUpper from '../../assets/photos/bg_upper.png';
+import bgUpper from '/assets/photos/bg_upper.png';
 export default function Home() {
     return (_jsxs("section", { className: "home-section", id: "home", children: [_jsxs("div", { className: "home-content", children: [_jsx("h1", { className: "home-title", children: "Hi, I'm Jayden C" }), _jsx(TypeAnimation, { sequence: [
                             'Developer', 2000,

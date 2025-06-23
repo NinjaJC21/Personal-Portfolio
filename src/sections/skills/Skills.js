@@ -1,11 +1,11 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import '../../sections/skills/skills.css';
 import { useEffect, useRef, useState } from 'react';
-import Thermometer from '../../assets/icons/thermometer.svg';
-import ThermometerLow from '../../assets/icons/thermometer-low.svg';
-import ThermometerHalf from '../../assets/icons/thermometer-half.svg';
-import ThermometerThreeFours from '../../assets/icons/thermometer-threefours.svg';
-import ThermometerHigh from '../../assets/icons/thermometer-high.svg';
+import Thermometer from '/assets/icons/thermometer.svg';
+import ThermometerLow from '/assets/icons/thermometer-low.svg';
+import ThermometerHalf from '/assets/icons/thermometer-half.svg';
+import ThermometerThreeFours from '/assets/icons/thermometer-threefours.svg';
+import ThermometerHigh from '/assets/icons/thermometer-high.svg';
 const ideaSteps = [
     {
         icon: Thermometer,
